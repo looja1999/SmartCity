@@ -87,6 +87,7 @@ nav {
   /* text-align: center; */
 }
 .smartBtn {
+  background-color: rgb(241, 239, 239);
   border-radius: 1rem;
   padding: 2% 15% 2% 15%;
   font-size: large;
@@ -142,14 +143,26 @@ p {
   text-align: justify;
 }
 
-section h4 {
+section h5 {
   text-align: justify;
-  width: 80%;
+  width: 100%;
   margin: 100px auto 25px auto;
 }
 
 .progessContainer {
   margin: 25%;
+}
+
+.zoom-img--1 {
+  height: 50%;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.zoom-img--2 {
+  height: 50%;
+  width: 80%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -215,7 +228,7 @@ section h4 {
     width: 100%;
   }
 
-  section h4 {
+  section h5 {
     font-size: 18px;
     width: 100%;
   }
@@ -223,10 +236,14 @@ section h4 {
   .zoom-img--1,
   .zoom-img--2 {
     width: 100%;
-    margin: 20px 0px;
-    height: 70%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
   }
 
+  .zoom-img--1 {
+    margin-left: 30px;
+  }
   .form-check-input {
     margin-right: 0;
     margin-left: 10px;
