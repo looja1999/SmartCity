@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="SmartCity.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Village</title>
+  </head>
+  <body>
+    <div class="container progessContainer">
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%"
+        ></div>
+      </div>
+    </div>
+    <div class="main hidden">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #448aff"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h2>runlinc</h2></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item sec-4">
+                <a class="nav-link" href="#section--4">Social & Economic</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container" id="section--1">
+        <div class="jumbotron">
+          <br />
+          <div class="container">
+            <div class="row info">
+              <div class="col text">
+                <button
+                  onclick="smartCity();"
+                  type="button"
+                  class="smartBtn"
+                  style="border-color: #448aff"
+                >
+                  <h1 class="smartCityText">SMART VILLAGE</h1>
+                </button>
+
+                <p style="text-align: center; margin-top: 10px">
+                  <strong>Creativity = Problem Solving</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <h4 id="h1" style="text-align: center">
+            IoT STEM Quality Education to implement United Nations Sustainable
+            Development Goals.
+          </h4>
+          <h6 id="h1" style="text-align: center">
+            Quality Education = Gender Equality = 2 x Human Resource =
+            Creativity
+          </h6>
+          <h6 id="h1" style="text-align: center">
+            QE = GE = 2 x HR = Creativity
+          </h6>
+          <h6 id="h1" style="text-align: center">
+            Using runlinc disruptive technology to make IR 4.0 IoT STEM AI
+            projects for Smart Villages.
+          </h6>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <img src="https://i.ibb.co/nmT3mqY/sdgs.png" class="sdg-img" />
+          <br />
+          <br />
+          <p style="text-align: center; font-size: small">
+            STEMSEL philosophy: The more you give the more you receive,
+            according to all holy books.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+      <br />
+
+      <div class="container" id="section--2" style="text-align: center">
+        <p style="text-align: center; font-size: small">
+          Click buttons to hear runlinc AI Voice Synthesis
+        </p>
+
+        <div class="row">
+          <div class="col">
+            <button class="btnSdg" id="sdg4" onclick="sdg4();">
+              <img
+                class="i"
+                src="https://www.un.org/sites/un2.un.org/files/field/image/e_gif_04.gif"
+              />
+              <br />
+              Smart School SDG4
+            </button>
+          </div>
+
+          <div class="col">
+            <button class="btnSdg" id="sdg5" onclick="sdg5();">
+              <img
+                class="i"
+                src="https://www.un.org/sites/un2.un.org/files/field/image/e_gif_05.gif"
+              />
+              <br />
+              Gender Equality SDG5
+            </button>
+          </div>
+          <div class="col">
+            <button class="btnSdg" id="sdg2" onclick="sdg2();">
+              <img
+                class="i"
+                src="https://media1.giphy.com/media/adJcL6EHjiUg0/200.gif"
+              />
+              <br />
+              Smart Farm SDG2
+            </button>
+          </div>
+          <div class="col">
+            <button class="btnSdg" id="sdg3" onclick="sdg3();">
+              <img
+                class="i"
+                src="https://media0.giphy.com/media/BqxrLook9LQYg/200.gif"
+              />
+              <br />
+              Smart Health SDG3
+            </button>
+          </div>
+
+          <div class="col">
+            <button class="btnSdg" id="sdg11" onclick="sdg11();">
+              <img
+                class="i"
+                id="sdg11Image"
+                src="https://www.un.org/sites/un2.un.org/files/field/image/e_gif_11.gif"
+              />
+              <br />
+              Smart Home SDG11
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <h6 class="ten-year-text" style="text-align: center">
+        10 year old upwards program runlinc to convert text to AI Voice
+        synthesis in Smart Villages.
+      </h6>
+
+      <hr />
+
+      <div class="section--3">
+        <div class="container">
+          <h5 class="bulb-text">
+            With runlinc webpage you can do sensing, data-logging, control of
+            any IoT devices anywhere in the world.
+          </h5>
+          <br />
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="wrapper">
+                <img
+                  id="lightBulbImg"
+                  height="30px"
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-sm-6" style="padding-top: 10%">
+              <div class="form-check form-switch switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <h6 style="margin-left: 10%; margin-top: 5%; padding-top: 10px">
+                  Click to turn on/off the bulb.
+                </h6>
+                <p style="margin-left: 11%; padding-top: 1px; font-size: small">
+                  Demostration of runlinc online.
+                </p>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="container" id="section--4" style="padding-top: 100px">
+        <h3 style="text-align: center">
+          Social and Economic Impact of using runlinc
+        </h3>
+        <div class="section4--jumbotron">
+          <div class="container" style="text-align: justify; margin-top: 30px">
+            <div id="load--more" style="text-align: justify">
+              <div style="text-align: center">
+                <img
+                  src="https://www.thenews.coop/wp-content/uploads/sustainable-development-goals.jpg"
+                  alt=""
+                  class="sdg-img2"
+                />
+              </div>
+              <p>
+                runlinc disruptive AI technology's economic social impact
+                strategy is based on increasing
+              </p>
+              <ol>
+                <li>Graduate employability</li>
+                <li>Startup of disruptive technology social businesses</li>
+              </ol>
+              <p>16 year old Arifin's Case Study</p>
+              <p>
+                Arifin replaced excessive online games with runlinc IoT STEM AI
+                projects to develop SMART VILLAGES
+              </p>
+              <ol>
+                <li>
+                  In 2021, Arifin was awarded a half scholarship for Grade 12
+                  studies at Peninsula International School of Australia (PISA)
+                  in Malaysia. This provides a solid economic outcome to develop
+                  Arifin's unique Graduate Employability case study.
+                </li>
+                <li>
+                  Arifin creates Social impact by donating some of the money to
+                  DOCS orphanage in Kathmandu, Nepal where he and the STEMSEL
+                  GLOBAL members train the destitute orphanage students to
+                  change the education model from 80% theory to 80% makers hands
+                  on problem based learning Quality Education.
+                </li>
+              </ol>
+
+              <p>
+                Arifin is a mentor of the Royal University of Bhutan RUB -
+                School mentoring program based in combining Andrgogy and
+                Pedagogy to implement His Majesty the King of Bhutan Decree of
+                Education Reform which includes "Make STEM subject a daily
+                language"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <section>
+        <div class="container" style="text-align: center; padding-bottom: 30px">
+          <h4>
+            10 year old Buchung explained to UNESCO manager in Nepal how he
+            recalls creativity from hibernation to implement UN SDGs in Smart
+            Villages.
+          </h4>
+          <img
+            class="zoom-img--1"
+            src="https://i.ibb.co/wBqC4qS/Whats-App-Image-2021-02-10-at-1-48-33-PM.jpg"
+            alt="Whats-App-Image-2021-02-10-at-1-48-33-PM"
+            border="0"
+            style="
+              height: 50%;
+              width: 80%;
+              margin-left: 10%;
+              margin-top: 2%;
+              margin-bottom: 5%;
+            "
+          />
+          <img
+            class="zoom-img--2"
+            src="https://i.ibb.co/mq7WrJV/Whats-App-Image-2021-02-09-at-11-47-40-AM.jpg"
+            alt="Gaming picture"
+            style="height: 50%; width: 80%"
+          />
+        </div>
+      </section>
+
+      <div class="footer">
+        <footer>
+          <h6 style="text-align: center">
+            This website is created using runlinc online.
+          </h6>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      function sdg11() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "Primary school students are taught to make Internet of things STEM Artificial Intelligence projects for smart homes to reduce the consumption of dirty electricity from coal power stations. For example: Turning off the lights when not in use will reduce PM 2.5 (Particulate Matter 2.5 microns) which is 40 times smaller than our hair diameter. Long term exposure to PM 2.5 causes blindness and lung diseases. In Nepal Villagers cut down trees for heating and cooking. Cutting down trees is like cutting lungs of Mother Earth."
+        );
+        window.speechSynthesis.speak(speech);
+        const sdg = document.querySelector("#sdg11Image");
+        document.querySelector("#sdg11").blur();
+      }
+
+      function sdg2() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "runlinc industry application in Smart Farm provides quality education to children of farmers. Real time monitoring and data logging graphs of temperature, PH, and light levels, in hydroponic smart farm can be used by students for research to increase the yeilds of crops."
+        );
+        window.speechSynthesis.speak(speech);
+        document.querySelector("#sdg2").blur();
+      }
+
+      function sdg3() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "COVID nineteen, pandemic lockdowns have created a massive mental health problem due to excessive and addictive online gaming. We use runlinc to replace online games with fun, exciting engaging STEM projects with Internet of things and Artificial Intelligence in primary school. Project example include COVID nineteen walkthrough Sanitizers. Student only need 6 lines of code to make intruder alarm with vision, on off light control and AI Voice to scare off the vandals for walkthrough Sanitizers"
+        );
+        window.speechSynthesis.speak(speech);
+        document.querySelector("#sdg3").blur();
+      }
+
+      function sdg4() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "runlinc disrupts the worlds education learning model by changing from 80% theory to 80% hands on, experiential, making STEM Internet of things AI projects. It can achieve 80% hands on experiential learning because it is fast, easy, simple, and fun. Ten year olds, can do Internet of Things projects like the university students. They can make smart farm intruder alarm with six lines of code. One line to create vision, two lines to control anything anywhere such as on and off lights or sound, 3 to create Artificial Voice Synthesis. Compatible technologies require hundreds of lines of coding."
+        );
+        window.speechSynthesis.speak(speech);
+        document.querySelector("#sdg4").blur();
+      }
+
+      function sdg5() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "Girls in bhutan make STEM a daily language in His Majesty the King of Bhutan's Education reform. They use runlinc disruptive technology to change the STEM education model from 80% theory to 80% makers hands on traning using runlinc. This runlinc quality education strategy is used to increase female participation from 10% to 100% to make Internet of things STEM Artificial Intelligence projects to develop Smart Villages. This will double the human resource to create 100% boys and 100% girls to create gender equality UN SDG 5"
+        );
+
+        window.speechSynthesis.speak(speech);
+        document.querySelector("#sdg5").blur();
+      }
+
+      function smartCity() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "Welcome to Smart Village implementing UN SDGs. Our strategy is to provide quality education to girls to develop gender quality to double the human resource, that is 100% boys 100% girls not 100% boys 10% girls. To achieve this, we need to recall creativity from hibernation to solve problems"
+        );
+        window.speechSynthesis.speak(speech);
+        document.querySelector(".smartBtn").blur();
+      }
+
+      //vairables
+      const h1 = document.querySelector("#h1");
+      const lightBulbImg = document.querySelector("#lightBulbImg");
+      const lightSwitch = document.querySelector(".form-check-input");
+      let lightState = false;
+      const nav = document.querySelector("nav");
+      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+      const { height: navHeight } = nav.getBoundingClientRect();
+      const smartBtn = document.querySelector(".smartBtn");
+      const section1 = document.querySelector("#section--1");
+      const section4 = document.querySelector("#section--4");
+      const section5 = document.querySelector("#section--5");
+      const sec4Nav = document.querySelector(".sec-4");
+      const sec5Nav = document.querySelector(".sec-5");
+      const progressBar = document.querySelector(".progress-bar");
+
+      // console.log(h1);
+
+      //Generate random color
+      function loading() {
+        max = 100;
+        for (let i = 0; i <= 100; i++) {
+          progressBar.style.width = `${i}%`;
+        }
+      }
+      loading();
+      const randomRGP = function () {
+        const rgbColor = `rgb( ${Math.trunc(Math.random() * 255)}, ${Math.trunc(
+          Math.random() * 255
+        )}, ${Math.trunc(Math.random() * 255)} )`;
+        return rgbColor;
+      };
+      const h1Color = () => {
+        h1.style.color = randomRGP();
+        h1.style.transition = "all 2s";
+      };
+      h1Color();
+      setInterval(h1Color, 3000);
+
+      //Light bulb
+      lightSwitch.addEventListener("click", function (e) {
+        //Guard clause
+        if (e.target.classList.contains("form-check-label")) return;
+
+        //Condition to turn on or off
+        if (!lightState) {
+          console.log(lightState);
+          lightState = true;
+          lightBulbImg.src =
+            "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+        } else {
+          lightState = false;
+          lightBulbImg.src =
+            "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+        }
+      });
+
+      // Sticky navbar after certain intersection
+      const options = {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${nav.getBoundingClientRect().height}px`,
+      };
+      const obs = function (entries, observer) {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+          nav.classList.remove("sticky-top");
+        }
+        if (!entry.isIntersecting) {
+          nav.classList.add("sticky-top");
+        }
+        // console.log(entry.isIntersecting);
+        // if (entry.isIntersecting) {
+        //   nav.classList.remove("sticky-top");
+        // } else {
+        //   nav.classList.add("sticky-top");
+        // }
+
+        // observer.unobserve(section1);
+      };
+
+      const observer = new IntersectionObserver(obs, options);
+      observer.observe(section1);
+
+      const wait = async (m = 2000) => {
+        return new Promise((resolve, _) => {
+          setTimeout(resolve, m);
+        });
+      };
+
+      //Changing button text
+
+      const smartCityText = document.querySelector(".smartCityText");
+      smartCityText.style.transition = "all 0.5s ease";
+      const smartCityTextChange = async function () {
+        await wait(4000);
+        // smartCityText.style.fontSize = "50px";
+        smartCityText.innerHTML = "Click to hear AI voice";
+        await wait(4000);
+        smartCityText.innerHTML = "SMART VILLAGE";
+      };
+
+      smartCityTextChange();
+      setInterval(smartCityTextChange, 8000);
+
+      smartCityTextChange();
+
+      //AI Voice when the page loads
+      function AIVoice() {
+        window.speechSynthesis.cancel();
+        const speech = new SpeechSynthesisUtterance(
+          "Please, click on buttons to hear AI Voice Synthesis"
+        );
+        window.speechSynthesis.speak(speech);
+      }
+      // // window.addEventListener("load", AIVoice);
+      window.addEventListener("load", function () {
+        AIVoice();
+        document.querySelector(".progessContainer").classList.add("hidden");
+        document.querySelector(".main").classList.remove("hidden");
+      });
+
+      //
+
+      //Go to section 4
+      sec4Nav.addEventListener("click", function (e) {
+        e.preventDefault();
+        navLinks.forEach((nav) => nav.classList.remove("active"));
+        const section4 = document.querySelector("#section--4");
+        const sec4Coords = section4.getBoundingClientRect();
+
+        window.scrollTo({
+          top: sec4Coords.top + pageYOffset + navHeight,
+          left: sec4Coords.left + pageXOffset,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

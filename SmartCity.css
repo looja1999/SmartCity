@@ -1,0 +1,239 @@
+* {
+  font-size: 18px;
+}
+body {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+nav {
+  position: relative;
+}
+/* Classes */
+.container {
+  margin-left: 20%;
+}
+
+.btnSdg {
+  padding: 5px;
+  margin: 10px;
+  height: 150px;
+  width: 190px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* .btn {
+  z-index: 3;
+} */
+.smartBtn:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+  transition: 200ms ease;
+}
+
+.btnSdg:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+  transition: 200ms ease;
+}
+
+/* Bulb */
+.wrapper {
+  height: auto;
+  width: 50%;
+  /* background-color: black; */
+  text-align: center;
+  padding-left: 30%;
+}
+
+.wrapper img {
+  height: 250px;
+  width: auto;
+}
+
+.footer {
+  margin-top: 2%;
+  background-color: #448aff;
+  color: white;
+  padding: 1% 4% 1% 4%;
+}
+
+.form-check-input {
+  padding: 3% 6% 3% 6%;
+}
+
+.section {
+  opacity: 0.9;
+  padding-top: 50px;
+}
+
+.info {
+  background: linear-gradient(#1f6df5, #0f54cc);
+  min-height: 100px;
+  display: flex;
+  border-radius: 1rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /* padding-left: 10%; */
+  margin-left: 300px;
+  width: auto;
+  color: white;
+  text-align: center;
+  /* text-align: center; */
+}
+.smartBtn {
+  border-radius: 1rem;
+  padding: 2% 15% 2% 15%;
+  font-size: large;
+  font-weight: bold;
+  transition: ease-in-out;
+  width: 70%;
+  height: 70%;
+}
+
+.hidden {
+  display: none;
+}
+
+.load--more--btn {
+  padding: 10px 30px 10px 30px;
+  width: 30%;
+  margin-top: 10px;
+  color: white;
+  background: #2a6ada;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.load--more--btn:hover {
+  transform: scale(1.1);
+}
+
+.load--more--btn:focus {
+  outline: none;
+}
+
+p {
+  text-align: justify;
+}
+
+.sdg-img {
+  width: 50%;
+  height: 30%;
+}
+
+.sdg-img2 {
+  height: 30%;
+  width: 80%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.section4--jumbotron {
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: justify;
+}
+
+section h4 {
+  text-align: justify;
+  width: 80%;
+  margin: 100px auto 25px auto;
+}
+
+.progessContainer {
+  margin: 25%;
+}
+
+@media only screen and (max-width: 480px) {
+  .smartBtn {
+    width: 90%;
+  }
+
+  .smartCityText {
+    font-size: 15px;
+  }
+
+  strong {
+    font-size: 13px;
+  }
+  .progessContainer {
+    margin: 50% auto auto auto;
+  }
+  #section--1 h6 {
+    font-size: 70%;
+  }
+
+  #section--1 .sdg-img {
+    width: 90%;
+  }
+
+  .bulb-text {
+    font-size: 18px;
+  }
+
+  .ten-year-text {
+    font-size: 15px;
+    margin: 1px 5px;
+  }
+
+  #lightBulbImg {
+    width: 130px;
+    height: auto;
+  }
+
+  .col-sm-6 {
+    padding-top: 0px;
+  }
+
+  .col-sm-6 h6 {
+    padding-top: 0px;
+  }
+
+  .section4--jumbotron {
+    padding-right: 0%;
+    padding-left: 0%;
+  }
+
+  .section4--jumbotron p {
+    margin-bottom: 15px;
+  }
+
+  .section4--jumbotron p,
+  .section4--jumbotron li,
+  .section4--jumbotron ol {
+    font-size: 14px;
+  }
+  .sdg-img2 {
+    width: 100%;
+  }
+
+  section h4 {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .zoom-img--1,
+  .zoom-img--2 {
+    width: 100%;
+    margin: 20px 0px;
+    height: 70%;
+  }
+
+  .form-check-input {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+    margin: 0px auto;
+  }
+}
