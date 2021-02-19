@@ -52,6 +52,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
+              <li class="nav-item sec-demo">
+                <a href="#section--4" class="nav-link"> Demostration</a>
+              </li>
               <li class="nav-item sec-4">
                 <a class="nav-link" href="#section--4">Social & Economic</a>
               </li>
@@ -212,9 +215,6 @@
 
                 <div class="lightClick">
                   <h6 class="lightClickText">Click to turn on/off the bulb.</h6>
-                  <p class="lightClickParagraph">
-                    Demostration of runlinc online.
-                  </p>
                 </div>
               </div>
               <br />
@@ -223,7 +223,44 @@
         </div>
       </div>
       <hr />
+      <section class="section-demostration">
+        <div class="container">
+          <h4>Demostration of runlinc online</h4>
 
+          <div class="video-1">
+            <iframe
+              width="853"
+              height="480"
+              src="https://www.youtube.com/embed/9gpk9t18wZQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+            ></iframe>
+            <p class="video-1-text">
+              runlinc controls truck servo motor and compressor pump from Bhutan
+              and enables IoT Data Logging and control for biogas system.
+            </p>
+          </div>
+
+          <div class="video-2">
+            <iframe
+              width="853"
+              height="480"
+              src="https://www.youtube.com/embed/1oR-HeUsfUQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+            ></iframe>
+
+            <p class="video-2-text">
+              12 year old Josh uses 1 line of code to program runlinc to create
+              Vision between phone IP Camera and laptop for AI Object
+              recognition.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
       <div class="container" id="section--4" style="padding-top: 100px">
         <h4 style="text-align: center">runlinc Social and Economic impact</h4>
         <div class="section4--jumbotron">
@@ -380,9 +417,11 @@
       const section4 = document.querySelector("#section--4");
       const section5 = document.querySelector("#section--5");
       const sec4Nav = document.querySelector(".sec-4");
+      const secDemo = document.querySelector(".sec-demo");
       const sec5Nav = document.querySelector(".sec-5");
       const progressBar = document.querySelector(".progress-bar");
-
+      const demostration = document.querySelector(".section-demostration");
+      console.log(demostration);
       // console.log(h1);
 
       //Generate random color
@@ -502,6 +541,17 @@
         window.scrollTo({
           top: sec4Coords.top + pageYOffset + navHeight,
           left: sec4Coords.left + pageXOffset,
+          behavior: "smooth",
+        });
+      });
+
+      secDemo.addEventListener("click", function (e) {
+        e.preventDefault();
+        const sectiondemo = document.querySelector(".section-demostration");
+        const sectionDemoCoords = sectiondemo.getBoundingClientRect();
+        window.scrollTo({
+          top: sectionDemoCoords.top + pageYOffset + navHeight,
+          left: sectionDemoCoords.left + pageXOffset,
           behavior: "smooth",
         });
       });

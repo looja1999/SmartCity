@@ -2,21 +2,24 @@
   font-size: 18px;
 }
 
+html,
 body {
+  height: 100%;
   color: black;
 }
+.container {
+  overflow-x: hidden;
+}
+
 img {
   height: 100px;
   width: 100px;
 }
 
-nav {
-  position: relative;
-}
 /* Classes */
-.container {
+/* .container {
   margin-left: 20%;
-}
+} */
 
 .btnSdg {
   background-color: rgb(241, 239, 239);
@@ -169,6 +172,9 @@ section h5 {
 /* @media (hover: hover) and (pointer: fine) and (max-width: 480px) {
  
 } */
+nav {
+  width: 100%;
+}
 
 .lightClickText {
   margin-left: 10%;
@@ -182,10 +188,49 @@ section h5 {
   font-size: small;
 }
 
+/* Demonstration section */
+.section-demostration {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.video-1 {
+  margin-top: 50px;
+}
+
+.video-1-text,
+.video-2-text {
+  /* border: 1px solid black; */
+  font-size: 16px;
+  width: 76%;
+  margin: 10px auto;
+  padding: 0;
+}
+
+.video-2 {
+  /* border: 1px solid black; */
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 480px) {
-  body {
-    overflow-x: hidden;
+  .video-1,
+  .video-2 {
+    width: 100%;
   }
+
+  iframe {
+    width: 350px;
+    height: 200px;
+  }
+
+  .video-1-text,
+  .video-2-text {
+    font-size: 13px;
+    width: 100%;
+    margin: 2px auto;
+  }
+
   #flexSwitchCheckDefault {
     display: inline-block;
     margin-top: 7px;
