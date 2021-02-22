@@ -86,21 +86,19 @@
           </div>
 
           <br />
+
           <h4 id="h1" style="text-align: center">
-            IoT STEM Quality Education to implement United Nations Sustainable
-            Development Goals.
+            Implement STEM Quality Education to achieve UN SDGs.
           </h4>
           <h6 id="h1" style="text-align: center">
-            Quality Education = Gender Equality = 2 x Human Resource =
-            Creativity
+            Strategy 1: Change 80% theory to 80% making STEM with IoT AI
+            projects.
           </h6>
           <h6 id="h1" style="text-align: center">
-            QE = GE = 2 x HR = Creativity
+            Strategy 2: Provide STEM Quality Education to girls to create Gender
+            Equality to double human resource.
           </h6>
-          <h6 id="h1" style="text-align: center">
-            runlinc disruptive technology makes IR 4.0 IoT STEM AI projects for
-            Smart Villages.
-          </h6>
+          <h6 id="h1" style="text-align: center">QE = GE = 2 x HR</h6>
           <h6 id="h1" style="text-align: center">
             Change 80% theory to 80% making projects
           </h6>
@@ -127,6 +125,11 @@
 
         <div class="row">
           <div class="col">
+            <div class="popup">
+              <span class="popuptext" id="myPopupSdg4"
+                >This is a test popip</span
+              >
+            </div>
             <button class="btnSdg" id="sdg4" onclick="sdg4();">
               <img
                 class="i"
@@ -138,6 +141,19 @@
           </div>
 
           <div class="col">
+            <div class="popup">
+              <span class="popuptext" id="myPopupSdg5">
+                Primary school students are taught to make Internet of things
+                STEM Artificial intelligence project for Smart homes to reduce
+                the use of dirty electricity from coal power stations. For
+                example: Turning off the lights when not in use will reduce PM
+                2.5 (Particualte Matter 2.5 microns) which is 40 times smaller
+                than our hair diameter. Long term exposure to PM 2.5 causes
+                blindness and lung diseases. In Nepal Villagers cut down trees
+                for heating and cooking. Cutting down trees is like cutting off
+                the lungs of Mother Earth.
+              </span>
+            </div>
             <button class="btnSdg" id="sdg5" onclick="sdg5();">
               <img
                 class="i"
@@ -148,6 +164,9 @@
             </button>
           </div>
           <div class="col">
+            <div class="popup">
+              <span class="popuptext" id="myPopupSdg2">This is sdg 2</span>
+            </div>
             <button class="btnSdg" id="sdg2" onclick="sdg2();">
               <img
                 class="i"
@@ -158,6 +177,9 @@
             </button>
           </div>
           <div class="col">
+            <div class="popup">
+              <span class="popuptext" id="myPopupSdg3">This is sdg 3</span>
+            </div>
             <button class="btnSdg" id="sdg3" onclick="sdg3();">
               <img
                 class="i"
@@ -169,6 +191,9 @@
           </div>
 
           <div class="col">
+            <div class="popup">
+              <span class="popuptext" id="myPopupSdg11">This is sdg 11</span>
+            </div>
             <button class="btnSdg" id="sdg11" onclick="sdg11();">
               <img
                 class="i"
@@ -402,7 +427,7 @@
       function smartCity() {
         window.speechSynthesis.cancel();
         const speech = new SpeechSynthesisUtterance(
-          "Welcome to Smart Village implementing UN SDGs. Our strategy is to provide quality education to girls to develop gender quality to double the human resources, that is 100% boys 100% girls. Our quality education model is based on 80% hands on and 20% theory.  Students recall creativity from hibernation to solve problems."
+          "Welcome to Smart Village implementing UN SDGs Sustainable Development Goals. Our strategy is to provide quality education to girls to develop gender quality to double the human resources, that is 100% boys 100% girls. Our quality education model is based on 80% hands on and 20% theory.  Students recall creativity from hibernation to solve problems."
         );
         window.speechSynthesis.speak(speech);
         document.querySelector(".smartBtn").blur();
@@ -559,6 +584,39 @@
           behavior: "smooth",
         });
       });
+
+      // popup
+
+      const sdgPopUp = function (sdg) {
+        document
+          .querySelector(`#${sdg}`)
+          .addEventListener("mouseenter", (e) => {
+            var popup = document.getElementById(
+              `myPopup${sdg[0].toUpperCase() + sdg.slice(1)}`
+            );
+            popup.classList.add("show");
+          });
+
+        document
+          .querySelector(`#${sdg}`)
+          .addEventListener("mouseleave", (e) => {
+            var popup = document.getElementById(
+              `myPopup${sdg[0].toUpperCase() + sdg.slice(1)}`
+            );
+            popup.classList.remove("show");
+          });
+      };
+
+      // SDG 4
+      sdgPopUp("sdg4");
+      // SDG 5
+      sdgPopUp("sdg5");
+      // SDG 3
+      sdgPopUp("sdg3");
+      // SDG 2
+      sdgPopUp("sdg2");
+      // SDG 11
+      sdgPopUp("sdg11");
     </script>
 
     <script
