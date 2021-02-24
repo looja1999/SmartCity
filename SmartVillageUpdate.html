@@ -73,6 +73,7 @@
                   onclick="smartCity();"
                   type="button"
                   class="smartBtn"
+                  id="smartBtn"
                   style="border-color: #448aff"
                 >
                   <h1 class="smartCityText">SMART VILLAGE</h1>
@@ -81,6 +82,24 @@
                 <p style="text-align: center; margin-top: 10px">
                   <strong>Creativity = Problem Solving</strong>
                 </p>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <p>
+                      Welcome to Smart Village implementing UN SDGs. Our
+                      strategy is to provide quality education to girls to
+                      develop gender quality to double the human resource, that
+                      is 100% boys 100% girls not 100% boys 10% girls. Our
+                      Quality education model is based on 80% hands on and 20%
+                      theory. Students recall creativity from hibernation to
+                      solve problems.
+                    </p>
+                    <p>Make STEM subject a daily language</p>
+                    <span class="close">&times;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -99,9 +118,6 @@
             Equality to double human resource.
           </h6>
           <h6 id="h1" style="text-align: center">QE = GE = 2 x HR</h6>
-          <h6 id="h1" style="text-align: center">
-            Change 80% theory to 80% making projects
-          </h6>
         </div>
         <br />
         <div style="text-align: center">
@@ -118,7 +134,7 @@
       <hr />
       <br />
 
-      <div class="container" id="section--2" style="text-align: center">
+      <div class="container-fluid" id="section--2" style="text-align: center">
         <p style="text-align: center; font-size: small">
           Click buttons to hear runlinc AI Voice Synthesis
         </p>
@@ -126,7 +142,19 @@
         <div class="row">
           <div class="col">
             <div class="popup">
-              <span class="popuptext" id="myPopupSdg4">SDG 4</span>
+              <span class="popuptext" id="myPopupSdg4">
+                runlinc disrupts the world's education model by changing from
+                80% theory to 80% hands on, experiential, making STEM Internet
+                of things AI Projects. It can achieve 80% hands on experiential
+                learning because it is fast, easy, simple, and fun. Ten year
+                olds can do Internet of things projects like the university
+                students. They can make Smart farm intruder alarm with six lines
+                of code. One line to create vision, two lines to control
+                anything anywhere such as on and off lights or sound, 3 lines to
+                create Artificial Intelligence Voice Synthesis to scare the
+                intruders. Compatible technologies require hundreds of lines of
+                coding.
+              </span>
             </div>
             <button class="btnSdg" id="sdg4" onclick="sdg4();">
               <img
@@ -140,7 +168,17 @@
 
           <div class="col">
             <div class="popup">
-              <span class="popuptext" id="myPopupSdg5"> Primary School </span>
+              <span class="popuptext" id="myPopupSdg5"
+                >Girls in Bhutan make STEM a daily language in His Majesty the
+                king of Bhutan's education reform. They use runlinc disruptive
+                technology to change the STEM education model from 80% theory to
+                80% makers hands on training. This runlinc quality education
+                strategy is used to increase female participation from 10% to
+                100% to make Internet of things STEM Artificial Intelligence
+                projects to develop Smart Villages. This will double the human
+                resource to 100% boys and 100% girls to create gender equality
+                UN SDG 5.</span
+              >
             </div>
             <button class="btnSdg" id="sdg5" onclick="sdg5();">
               <img
@@ -153,7 +191,16 @@
           </div>
           <div class="col">
             <div class="popup">
-              <span class="popuptext" id="myPopupSdg2">This is sdg 2</span>
+              <span class="popuptext" id="myPopupSdg2">
+                runlinc industry application in Smart Farm provides runlinc
+                quality education to farmers children and employees of farmers.
+                Real time monitoring and data logging graphical displays of
+                temperature, PH and light levels in hydroponic smart farms can
+                be used by students for research to increase the yield of crops
+                using Internet of things and artificial intelligence analytics
+                to determine the optimum combination of parameters to shorten
+                the harvesting times of exotic plants.
+              </span>
             </div>
             <button class="btnSdg" id="sdg2" onclick="sdg2();">
               <img
@@ -166,7 +213,17 @@
           </div>
           <div class="col">
             <div class="popup">
-              <span class="popuptext" id="myPopupSdg3">This is sdg 3</span>
+              <span class="popuptext" id="myPopupSdg3">
+                COVID nineteen pandemic lockdowns have created massive mental
+                health problems due to excessive and addictive online gaming. We
+                use runlinc to replace online games with fun, exciting engaging
+                STEM projects with Internet of things and artificial
+                intelligence in primary school. Project example include COVID
+                nineteen walkthrough sanitizers. Students only need 6 lines of
+                code to make intruder alarm with vision, on off light control
+                and AI Voice to scare off the intruders and vandals of
+                walkthrough sanitizers.
+              </span>
             </div>
             <button class="btnSdg" id="sdg3" onclick="sdg3();">
               <img
@@ -180,7 +237,17 @@
 
           <div class="col">
             <div class="popup">
-              <span class="popuptext" id="myPopupSdg11">This is sdg 11</span>
+              <span class="popuptext" id="myPopupSdg11">
+                Primary school students are taught to make Internet of things
+                STEM Artificial intelligence project for Smart homes to reduce
+                the use of dirty electricity from coal power stations. For
+                example: Turning off the lights when not in use will reduce PM
+                2.5 (Particulate Matter 2.5 microns) which is 40 times smaller
+                than our hair diameter. Long term exposure to PM 2.5 causes
+                blindness and lung diseases. In Nepal Villagers cut down trees
+                for heating and cooking. Cutting down trees is like cutting off
+                the lungs of Mother Earth.
+              </span>
             </div>
             <button class="btnSdg" id="sdg11" onclick="sdg11();">
               <img
@@ -365,61 +432,116 @@
     </div>
 
     <script>
+      // AI VOICE state
+
+      let voiceStateSDG11 = false;
+
       function sdg11() {
-        window.speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(
-          "Primary school students are taught to make Internet of things STEM Artificial intelligence project for Smart homes to reduce the use of dirty electricity from coal power stations. For example: Turning off the lights when not in use will reduce PM 2.5 (Particualte Matter 2.5 microns) which is 40 times smaller than our hair diameter. Long term exposure to PM 2.5 causes blindness and lung diseases. In Nepal Villagers cut down trees for heating and cooking. Cutting down trees is like cutting off the lungs of Mother Earth."
-        );
-        window.speechSynthesis.speak(speech);
-        const sdg = document.querySelector("#sdg11Image");
+        if (!voiceStateSDG11) {
+          window.speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(
+            "Primary school students are taught to make Internet of things STEM Artificial intelligence project for Smart homes to reduce the use of dirty electricity from coal power stations. For example: Turning off the lights when not in use will reduce PM 2.5 (Particualte Matter 2.5 microns) which is 40 times smaller than our hair diameter. Long term exposure to PM 2.5 causes blindness and lung diseases. In Nepal Villagers cut down trees for heating and cooking. Cutting down trees is like cutting off the lungs of Mother Earth."
+          );
+          window.speechSynthesis.speak(speech);
+          const sdg = document.querySelector("#sdg11Image");
+          voiceStateSDG11 = true;
+        } else {
+          window.speechSynthesis.cancel();
+          voiceStateSDG11 = false;
+        }
+
         document.querySelector("#sdg11").blur();
       }
 
+      let voiceStateSDG2 = false;
       function sdg2() {
-        window.speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(
-          "runlinc industry application in Smart Farm provides runlinc quality education to farmers children and employees of farmers. Real time monitoring and data logging graphical displays of temperature, Ph and light levels in hydroponic smart farms can be used by students for research to increase the yield of crops using Internet of things and artificial intelligence analytics to determine the optimum combination of parameters to shorten the harvesting times of exotic plants."
-        );
-        window.speechSynthesis.speak(speech);
+        if (!voiceStateSDG2) {
+          window.speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(
+            "runlinc industry application in Smart Farm provides runlinc quality education to farmers children and employees of farmers. Real time monitoring and data logging graphical displays of temperature, Ph and light levels in hydroponic smart farms can be used by students for research to increase the yield of crops using Internet of things and artificial intelligence analytics to determine the optimum combination of parameters to shorten the harvesting times of exotic plants."
+          );
+          window.speechSynthesis.speak(speech);
+          voiceStateSDG2 = true;
+        } else {
+          window.speechSynthesis.cancel();
+          voiceStateSDG2 = false;
+        }
         document.querySelector("#sdg2").blur();
       }
 
+      let voiceStateSDG3 = false;
       function sdg3() {
-        window.speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(
-          "COVID nineteen pandemic lockdowns have created massive mental health problems due to excessive and addictive online gaming. We use runlinc to replace online games with fun, exciting engaging STEM projects with Internet of things and artificial intelligence in primary school. Project example include COVID nineteen walkthrough sanitizers. Students only need 6 lines of code to make intruder alarm with vision, on off light control and AI Voice to scare off the intruders and vandals of walkthrough sanitizers."
-        );
-        window.speechSynthesis.speak(speech);
+        if (!voiceStateSDG3) {
+          window.speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(
+            "COVID nineteen pandemic lockdowns have created massive mental health problems due to excessive and addictive online gaming. We use runlinc to replace online games with fun, exciting engaging STEM projects with Internet of things and artificial intelligence in primary school. Project example include COVID nineteen walkthrough sanitizers. Students only need 6 lines of code to make intruder alarm with vision, on off light control and AI Voice to scare off the intruders and vandals of walkthrough sanitizers."
+          );
+          window.speechSynthesis.speak(speech);
+          voiceStateSDG3 = true;
+        } else {
+          window.speechSynthesis.cancel();
+          voiceStateSDG3 = false;
+        }
         document.querySelector("#sdg3").blur();
       }
 
+      let voiceStateSDG4 = false;
       function sdg4() {
-        window.speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(
-          "runlinc disrupts the world's education model by changing from 80% theory to 80% hands on, experiential, making STEM Internet of things AI Projects. It can achieve 80% hands on experiential learning because it is fast, easy, simple, and fun. Ten year olds can do Internet of things projects like the university students. They can make Smart farm intruder alarm with six lines of code. One line to create vision, two lines to control anything anywhere such as on and off lights or sound, 3 lines to create Artificial Intelligence Voice Synthesis to scare the intruders. Compatible technologies require hundreds of lines of coding."
-        );
-        window.speechSynthesis.speak(speech);
+        if (!voiceStateSDG4) {
+          window.speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(
+            "runlinc disrupts the world's education model by changing from 80% theory to 80% hands on, experiential, making STEM Internet of things AI Projects. It can achieve 80% hands on experiential learning because it is fast, easy, simple, and fun. Ten year olds can do Internet of things projects like the university students. They can make Smart farm intruder alarm with six lines of code. One line to create vision, two lines to control anything anywhere such as on and off lights or sound, 3 lines to create Artificial Intelligence Voice Synthesis to scare the intruders. Compatible technologies require hundreds of lines of coding."
+          );
+          window.speechSynthesis.speak(speech);
+          voiceStateSDG4 = true;
+        } else {
+          window.speechSynthesis.cancel();
+          voiceStateSDG4 = false;
+        }
         document.querySelector("#sdg4").blur();
       }
 
+      let voiceStateSDG5 = false;
       function sdg5() {
-        window.speechSynthesis.cancel();
-        const speech = new SpeechSynthesisUtterance(
-          "Girls in Bhutan make STEM a daily language in His Majesty the king of bhutan's education reform. They use runlinc disruptive technology to change the STEM education model from 80% theory to 80% makers hands on training. This runlinc quality education strategy is used to increase female participation from 10% to 100% to make Internet of things STEM Artificial Intelligence projects to develop Smart Villages. This will double the human resource to 100% boys and 100% girls to create gender equality UN SDG 5."
-        );
+        if (!voiceStateSDG5) {
+          window.speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(
+            "Girls in Bhutan make STEM a daily language in His Majesty the king of bhutan's education reform. They use runlinc disruptive technology to change the STEM education model from 80% theory to 80% makers hands on training. This runlinc quality education strategy is used to increase female participation from 10% to 100% to make Internet of things STEM Artificial Intelligence projects to develop Smart Villages. This will double the human resource to 100% boys and 100% girls to create gender equality UN SDG 5."
+          );
 
-        window.speechSynthesis.speak(speech);
+          window.speechSynthesis.speak(speech);
+          voiceStateSDG5 = true;
+        } else {
+          window.speechSynthesis.cancel();
+          voiceStateSDG5 = false;
+        }
         document.querySelector("#sdg5").blur();
       }
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.querySelector(".smartBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
 
       function smartCity() {
         window.speechSynthesis.cancel();
         const speech = new SpeechSynthesisUtterance(
-          "Welcome to Smart Village implementing UN SDGs Sustainable Development Goals. Our strategy is to provide quality education to girls to develop gender quality to double the human resources, that is 100% boys 100% girls. Our quality education model is based on 80% hands on and 20% theory.  Students recall creativity from hibernation to solve problems."
+          "Welcome to Smart Village implementing UN SDGs Sustainable Development Goals. Our strategy is to provide quality education to girls to develop gender quality to double the human resource, that is 100% boys 100% girls not 100% boys 10% girls. Our quality education model is based on 80% hands on and 20% theory.  Students recall creativity from hibernation to solve problems."
         );
         window.speechSynthesis.speak(speech);
         document.querySelector(".smartBtn").blur();
+        // When the user clicks on the button, open the modal
+        modal.style.display = "block";
       }
+      // When the user clicks on <span> (x), close the modal
+      span.addEventListener("click", () => {
+        modal.style.display = "none";
+        window.speechSynthesis.cancel();
+      });
 
       //vairables
       const h1 = document.querySelector("#h1");
@@ -495,14 +617,6 @@
         if (!entry.isIntersecting) {
           nav.classList.add("sticky-top");
         }
-        // console.log(entry.isIntersecting);
-        // if (entry.isIntersecting) {
-        //   nav.classList.remove("sticky-top");
-        // } else {
-        //   nav.classList.add("sticky-top");
-        // }
-
-        // observer.unobserve(section1);
       };
 
       const observer = new IntersectionObserver(obs, options);
@@ -579,12 +693,13 @@
         document
           .querySelector(`#${sdg}`)
           .addEventListener("mouseenter", (e) => {
+            console.log(document.querySelector(`#${sdg}`));
+            document.getElementById("`my");
             var popup = document.getElementById(
               `myPopup${sdg[0].toUpperCase() + sdg.slice(1)}`
             );
             popup.classList.add("show");
           });
-
         document
           .querySelector(`#${sdg}`)
           .addEventListener("mouseleave", (e) => {
@@ -594,6 +709,19 @@
             popup.classList.remove("show");
           });
       };
+
+      // document.querySelector("#section--2").addEventListener("click", (e) => {
+      //   if (
+      //     e.target.classList.contains("btnSdg") ||
+      //     e.target.classList.contains("i")
+      //   ) {
+      //     // voiceStateSDG5
+      //     console.log(e.target);
+      //     return;
+      //   }
+
+      //   window.speechSynthesis.cancel();
+      // });
 
       // SDG 4
       sdgPopUp("sdg4");
